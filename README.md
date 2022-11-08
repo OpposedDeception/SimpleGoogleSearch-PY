@@ -11,7 +11,7 @@ Install Python, obviously you need it.
 https://www.python.org/
 
 
-In order to use this script correctly, you have have to make sure you have installed a few packages.
+In order to use this script correctly, you have to make sure you have installed a few packages.
 
 **Colorama package**
 
