@@ -7,7 +7,6 @@ try:
 except ImportError:
     import_error.append('googlesearch-python')
     import_error.append('colorama')
-    import_error.append('variantsez')
     user_choice = input("You got import error. Do you want to continue?: ")
 
     positive_variants = ['yes',
