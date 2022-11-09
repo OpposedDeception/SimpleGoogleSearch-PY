@@ -26,3 +26,9 @@ To do so, write `python3 -m pip install googlesearch-python`
 
 
   ![image](https://user-images.githubusercontent.com/113610915/200635775-a02d7be4-dd82-4cb5-a2a0-7945a22d745e.png)
+  
+ **Time Package**
+ 
+ To install final library, just do as always `pip install time`
+ 
+ ![image](https://user-images.githubusercontent.com/113610915/200878705-e0ecd399-49c9-4471-a9ef-cd22997448f0.png)
