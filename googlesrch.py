@@ -3,11 +3,12 @@ import_error = []
 
 try:
     from googlesearch import search
-    import colorama
+    from colorama import Fore, Back
+    from time import sleep
 except ImportError:
     import_error.append('googlesearch-python')
     import_error.append('colorama')
-    import_error.append('variantsez')
+    import_error.append('time')
     user_choice = input("You got import error. Do you want to continue?: ")
 
     positive_variants = ['yes',
