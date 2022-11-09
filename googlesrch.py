@@ -28,9 +28,12 @@ except ImportError:
                          'No']
 
     if user_choice in (positive_variants):
-        print(f"You havent installed {import_error} library. \nTo do so, write: pip install {import_error}")
+        input(Fore.RED + f'You havent installed {import_error} library. \nTo do so, write: pip install {import_error} \nPress CLOSE to exit')
+        exit()
     else:
         print("Then fuck off idiot")
+        input("Press CLOSE to exit")
+        exit()
 
 
 print(Back.CYAN + Fore.BLACK + 'This program was made by me while I was drunk xd')
