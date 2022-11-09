@@ -1,5 +1,5 @@
 # SimpleGoogleSearch-PY
-Simple console-line google searcher. This script will soon allow you to use your command prompt to search in Google and maybe in other search engines.
+Simple console-line google searcher. This script allows you to use your command prompt to search in Google and maybe in other search engines.
 
 ## Installation
 
@@ -22,7 +22,7 @@ To install colorama package, write `python3 -m pip install colorama`
 
 **Google Search library**
 
-To do so, write `python3 -m pip install googlesearch-python`
+To do so, write `python3 -m pip install gsearchlib`
 
 
   ![image](https://user-images.githubusercontent.com/113610915/200635775-a02d7be4-dd82-4cb5-a2a0-7945a22d745e.png)
