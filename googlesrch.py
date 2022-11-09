@@ -2,11 +2,11 @@ import_error = []
 
 
 try:
-    from googlesearch import search
+    from gsearchlib import Search
     from colorama import Fore, Back
     from time import sleep
 except ImportError:
-    import_error.append('googlesearch-python')
+    import_error.append('gsearchlib')
     import_error.append('colorama')
     import_error.append('time')
     user_choice = input("You got import error. Do you want to continue?: ")
@@ -28,7 +28,7 @@ except ImportError:
                          'No']
 
     if user_choice in (positive_variants):
-        input(Fore.RED + f'You havent installed {import_error} library. \nTo do so, write: pip install {import_error} \nPress CLOSE to exit')
+        input(f'You havent installed {import_error} library. \nTo do so, write: pip install {import_error} \nPress CLOSE to exit')
         exit()
     else:
         print("Then fuck off idiot")
