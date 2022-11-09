@@ -30,3 +30,19 @@ except ImportError:
         print(f"You havent installed {import_error} library. \nTo do so, write: pip install {import_error}")
     else:
         print("Then fuck off idiot")
+
+
+print(Back.CYAN + Fore.BLACK + 'This program was made by me while I was drunk xd')
+searchvariant = input(Fore.BLACK + 'Welcome to Google Search! \nWrite "Y" to continue or "N" to close program: ')
+yes = ['Y']
+if searchvariant in (yes):
+    print(Fore.BLACK + 'Search engine is loading....')
+    sleep(4)
+    var = input(Back.WHITE + 'Write what do you want to see: ')
+    res = Search(var)
+    print(res)
+    k = input("Press CLOSE to exit")
+    exit()
+else:
+    input(Back.CYAN + Fore.BLACK + 'N means NO, then goodbye. Press CLOSE to exit')
+    exit()
