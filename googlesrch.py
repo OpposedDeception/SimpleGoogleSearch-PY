@@ -35,7 +35,7 @@ except ImportError:
         input("Press CLOSE to exit")
         exit()
 
-init(Convert=True)
+init(convert=True)
 
 print(Back.CYAN + Fore.BLACK + 'This program was made by me while I was drunk xd')
 searchvariant = input(Fore.BLACK + 'Welcome to Google Search! \nWrite "Y" to continue or "N" to close program: ')
