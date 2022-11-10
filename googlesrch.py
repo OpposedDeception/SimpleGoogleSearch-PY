@@ -3,7 +3,7 @@ import_error = []
 
 try:
     from gsearchlib import Search
-    from colorama import Fore, Back
+    from colorama import Fore, Back, init
     from time import sleep
 except ImportError:
     import_error.append('gsearchlib')
@@ -35,6 +35,7 @@ except ImportError:
         input("Press CLOSE to exit")
         exit()
 
+init(Convert=True)
 
 print(Back.CYAN + Fore.BLACK + 'This program was made by me while I was drunk xd')
 searchvariant = input(Fore.BLACK + 'Welcome to Google Search! \nWrite "Y" to continue or "N" to close program: ')
