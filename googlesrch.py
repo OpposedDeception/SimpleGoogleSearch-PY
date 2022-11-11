@@ -69,7 +69,7 @@ def read_url_from_input(url_2):
 def openthe_link():
         print("1. Get response status from the link. \n2. Read url file")
 
-        usrinp = ("Tell me what to do: ")
+        usrinp = input("Tell me what to do: ")
         choice_from_user = ('1', '2')
         if usrinp in choice_from_user == 1:
             usrinpchoice = input("Paste your link here: ")
