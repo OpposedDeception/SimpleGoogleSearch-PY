@@ -29,6 +29,12 @@ To do so, write `python3 -m pip install gsearchlib`
   
  **Time Package**
  
- To install final library, just do as always `pip install time`
+ To install time library, write: `pip install time`
  
  ![image](https://user-images.githubusercontent.com/113610915/200878705-e0ecd399-49c9-4471-a9ef-cd22997448f0.png)
+ 
+ **urllib3 package**
+ 
+ To install final libaryr, just do as always `pip install urllib3`
+ ![image](https://user-images.githubusercontent.com/113610915/201345125-c407f61d-4190-467c-b837-fd50357844fb.png)
+
