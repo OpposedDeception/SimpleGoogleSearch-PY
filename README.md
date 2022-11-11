@@ -34,8 +34,13 @@ To do so, write `python3 -m pip install gsearchlib`
  ![image](https://user-images.githubusercontent.com/113610915/200878705-e0ecd399-49c9-4471-a9ef-cd22997448f0.png)
  
  **urllib3 package**
- ![image](https://user-images.githubusercontent.com/113610915/201345125-c407f61d-4190-467c-b837-fd50357844fb.png)
  
  To install final libaryr, just do as always `pip install urllib3`
+ 
+ 
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/113610915/201345300-f33db7bf-d19d-4fe6-b699-b60194bade52.png)
+
  
 
