@@ -54,7 +54,8 @@ def openthe_link():
         print("3. Get response status from the link. \n4. Read url file")
 
         usrinp = input("Tell me what to do: ")
-        choice_from_user = ('3', '4')
+        choice_from_user = ('3')
+        choice_from_user_two = ('4')
         if usrinp in (choice_from_user):
             usrinpchoice = input("Paste your link here: ")
             result_from_1 = open_in_browser(usrinpchoice)
@@ -62,7 +63,7 @@ def openthe_link():
             A = input("Are you happy with the result? ")
             B = input("Thank you for using my functions! \nPress ENTER to close")
             exit()
-        elif usrinp in (choice_from_user):
+        elif usrinp in (choice_from_user_two):
             usrinpchoice_2 = input("Paste your link here: ")
             result_from_2 = openthis_url(usrinpchoice_2)
             print(result_from_2)
