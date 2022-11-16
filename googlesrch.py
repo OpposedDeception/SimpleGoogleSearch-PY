@@ -7,12 +7,14 @@ try:
     from time import sleep
     import urllib.request
     import urllib
+    import webbrowser
 except ImportError:
     import_error.append('gsearchlib')
     import_error.append('colorama')
     import_error.append('time')
     import_error.append('urllib3')
-    import_arror.append('urllib.request)
+    import_error.append('urllib.request)
+    import_error.append('webbrowser')           
     user_choice = input("You got import error. Do you want to continue?: ")
 
     positive_variants = ['yes',
@@ -41,12 +43,12 @@ except ImportError:
 
 init(convert=True)
 
+def open_in_browser(url_from_user):
+    url = url_from_user
+    webbrowser.open(url, new = 0, autoraise = True)
 def openthis_url(url):
     with urllib.request.urlopen(url) as get_url:
-        print(f'Response Status: {get_url.getcode()}')
-def read_url_from_input(url_2):
-    get_url_2 = urllib.urlopen(url_2)
-    print(get_url_2.read())
+        print(f'Response Status: {get_url.getcode()}')                   
 
 def openthe_link():
         print("3. Get response status from the link. \n4. Read url file")
@@ -55,14 +57,14 @@ def openthe_link():
         choice_from_user = ('3', '4')
         if usrinp in (choice_from_user):
             usrinpchoice = input("Paste your link here: ")
-            result_from_1 = openthis_url(usrinpchoice)
+            result_from_1 = open_in_browser(usrinpchoice)
             print(result_from_1)
             A = input("Are you happy with the result? ")
             B = input("Thank you for using my functions! \nPress ENTER to close")
             exit()
         elif usrinp in (choice_from_user):
             usrinpchoice_2 = input("Paste your link here: ")
-            result_from_2 = read_url_from_input(usrinpchoice_2)
+            result_from_2 = openthis_url(usrinpchoice_2)
             print(result_from_2)
             C = input("Copy the result if needed.")
             D = input(Fore.BLACK + Back.CYAN + 'Thank you for using my functions! \nPress ENTER to close')
