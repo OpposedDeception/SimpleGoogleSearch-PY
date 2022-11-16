@@ -13,7 +13,7 @@ except ImportError:
     import_error.append('colorama')
     import_error.append('time')
     import_error.append('urllib3')
-    import_error.append('urllib.request)
+    import_error.append('urllib.request')
     import_error.append('webbrowser')           
     user_choice = input("You got import error. Do you want to continue?: ")
 
