@@ -43,7 +43,7 @@ init(convert=True)
 
 def openthis_url(url):
     with urllib.request.urlopen(url) as get_url:
-        print(f'Response Status: {get_url.getcode}')
+        print(f'Response Status: {get_url.getcode()}')
 def read_url_from_input(url_2):
     get_url_2 = urllib.urlopen(url_2)
     print(get_url_2.read())
