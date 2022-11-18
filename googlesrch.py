@@ -36,7 +36,7 @@ except ImportError:
         exit()
     else:
         print("Then fuck off idiot")
-        input("Press CLOSE to exit")
+        input("Press ENTER to exit")
         exit()
 
 init(convert=True)
