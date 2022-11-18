@@ -5,7 +5,6 @@ try:
     from gsearchlib import Search
     from colorama import Fore, Back, init
     from time import sleep
-    import urllib.request
     import urllib
     import webbrowser
 except ImportError:
@@ -43,12 +42,21 @@ except ImportError:
 
 init(convert=True)
 
-def open_in_browser(url_from_user):
-    url = url_from_user
-    webbrowser.open(url, new = 0, autoraise = True)
-def openthis_url(url):
-    with urllib.request.urlopen(url) as get_url:
-        print(f'Response Status: {get_url.getcode()}')                   
+# Will fix these later
+class OpenInBrowser:
+    def __init__(self, user_choice):
+        self.user_choice = user_choice
+        
+    def open_in_browser(self):
+        url = self.user_choice
+        webbrowser.open(url, new = 0, autoraise = True)
+    
+    
+class UrlStatus(OpenInBrowser):
+    def openthis_url(self, user_choice):
+        wuth urllib.urlopen(self.user_choice) as get_url:
+            print(f'Response Status: {get_url.getcode()}')     
+# I will surely fix this part someday
 
 def openthe_link():
         print("3. Get response status from the link. \n4. Read url file")
