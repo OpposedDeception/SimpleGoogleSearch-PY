@@ -12,7 +12,6 @@ except ImportError:
     import_error.append('colorama')
     import_error.append('time')
     import_error.append('urllib3')
-    import_error.append('urllib.request')
     import_error.append('webbrowser')           
     user_choice = input("You got import error. Do you want to continue?: ")
 
@@ -47,14 +46,14 @@ class OpenInBrowser:
     def __init__(self, user_choice):
         self.user_choice = user_choice
         
-    def open_in_browser(self):
+    def open_in_browser_link(self):
         url = self.user_choice
         webbrowser.open(url, new = 0, autoraise = True)
     
     
 class UrlStatus(OpenInBrowser):
     def openthis_url(self, user_choice):
-        wuth urllib.urlopen(self.user_choice) as get_url:
+        with urllib.urlopen(self.user_choice) as get_url:
             print(f'Response Status: {get_url.getcode()}')     
 # I will surely fix this part someday
 
@@ -66,7 +65,7 @@ def openthe_link():
         choice_from_user_two = ('4')
         if usrinp in (choice_from_user):
             usrinpchoice = input("Paste your link here: ")
-            result_from_1 = open_in_browser(usrinpchoice)
+            result_from_1 = open_in_browser_link(usrinpchoice)
             print(result_from_1)
             A = input("Are you happy with the result? ")
             B = input("Thank you for using my functions! \nPress ENTER to close")
