@@ -1,6 +1,3 @@
-import_error = []
-
-
 try:
     from gsearchlib import Search
     from colorama import Fore, Back, init
@@ -13,32 +10,9 @@ except ImportError:
     import_error.append('time')
     import_error.append('urllib3')
     import_error.append('webbrowser')           
-    user_choice = input("You got import error. Do you want to continue?: ")
-
-    positive_variants = ['yes',
-                         'Yes',
-                         'yES',
-                         'yEs',
-                         'YeS',
-                         'yeS',
-                         'YES']
-
-    negative_variants = ['no',
-                         'NO',
-                         'nah',
-                         'NAH',
-                         'noo',
-                         'nO',
-                         'No']
-
-    if user_choice in (positive_variants):
-        input(f'You havent installed {import_error} library. \nTo do so, write: pip install {import_error} \nPress CLOSE to exit')
+    input(f'You havent installed {import_error} library. \nTo do so, write: pip install {import_error} \nPress CLOSE to exit')
         exit()
-    else:
-        print("Then fuck off idiot")
-        input("Press ENTER to exit")
-        exit()
-
+        
 init(convert=True)
 
 # Will fix these later
