@@ -1,4 +1,4 @@
-# SimpleGoogleSearch-PY
+# SimpleGoogleSearch-PY [Closed]
 Simple console-line google searcher. This script allows you to use your command prompt to search in Google and maybe in other search engines.
 
 ## Installation
