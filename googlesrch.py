@@ -48,8 +48,8 @@ def openthe_link():
             B = input("Thank you for using my functions! \nPress ENTER to close")
             exit()
         elif usrinp in (choice_from_user_two):
-            usrinpchoice_2 = input("Paste your link here: ")
-            UrlStatus.openthis_url(usrinpchoice_2)
+            pass
+            UrlStatus.openthis_url(usrinp)
             C = input("Copy the result if needed.")
             D = input(Fore.BLACK + Back.CYAN + 'Thank you for using my functions! \nPress ENTER to close')
             exit()
