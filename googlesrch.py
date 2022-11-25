@@ -20,9 +20,13 @@ class OpenInBrowser:
         self.choice_the_user = choice_the_user
         
     def open_in_browser_link(self, choice_the_user):
-        webbrowser.open(self.choice_the_user, new = 0, autoraise = True)
-    
-    
+       webbrowser.open(self.choice_the_user, new = 0, autoraise = True)
+       
+    @staticmethod
+    def ask_user():
+        input("Paste your link here: ")
+        open_in_browser_link()
+        
 class UrlStatus(OpenInBrowser):
     def openthis_url(self, choice_the_user):
         with urllib.urlopen(self.choice_the_user) as get_url:
@@ -35,9 +39,8 @@ def openthe_link():
         choice_from_user = ('3')
         choice_from_user_two = ('4')
         if usrinp in (choice_from_user):
-            usrinpchoice = input("Paste your link here: ")
-            result_from_1 = OpenInBrowser(usrinpchoice)
-            print(result_from_1)
+            if usrinp in (choice_from_user):
+            OpenInBrowser.ask_user()
             A = input("Are you happy with the result? ")
             B = input("Thank you for using my functions! \nPress ENTER to close")
             exit()
