@@ -15,21 +15,18 @@ except ImportError:
         
 init(convert=True)
 
-# Will fix these later
 class OpenInBrowser:
     def __init__(self, user_choice):
-        self.user_choice = user_choice
+        self.choice_the_user = choice_the_user
         
-    def open_in_browser_link(self):
-        url = self.user_choice
-        webbrowser.open(url, new = 0, autoraise = True)
+    def open_in_browser_link(self, choice_the_user):
+        webbrowser.open(self.choice_the_user, new = 0, autoraise = True)
     
     
 class UrlStatus(OpenInBrowser):
-    def openthis_url(self, user_choice):
-        with urllib.urlopen(self.user_choice) as get_url:
-            print(f'Response Status: {get_url.getcode()}')     
-# I will surely fix this part someday
+    def openthis_url(self, choice_the_user):
+        with urllib.urlopen(self.choice_the_user) as get_url:
+            print(f'Response Status: {get_url.getcode()}')
 
 def openthe_link():
         print("3. Get response status from the link. \n4. Read url file")
@@ -39,7 +36,7 @@ def openthe_link():
         choice_from_user_two = ('4')
         if usrinp in (choice_from_user):
             usrinpchoice = input("Paste your link here: ")
-            result_from_1 = open_in_browser_link(usrinpchoice)
+            result_from_1 = OpenInBrowser(usrinpchoice)
             print(result_from_1)
             A = input("Are you happy with the result? ")
             B = input("Thank you for using my functions! \nPress ENTER to close")
