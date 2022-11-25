@@ -31,9 +31,9 @@ class OpenInBrowser:
             webbrowser.open(dogshit, new = 0, autoraise = True)
         
 class UrlStatus(OpenInBrowser):
-    def openthis_url(self, choice_the_user):
-        with urllib.urlopen(self.choice_the_user) as get_url:
-            print(f'Response Status: {get_url.getcode()}')
+    def openthis_url(self):
+        with urllib.urlopen(self.choice_the_user) as url:
+             print(f'Response Status: {url.getcode()}')
 
 def openthe_link():
         print("3. Get response status from the link. \n4. Read url file")
