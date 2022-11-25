@@ -2,7 +2,7 @@ try:
     from gsearchlib import Search
     from colorama import Fore, Back, init
     from time import sleep
-    import urllib
+    import urllib.request
     import webbrowser
 except ImportError:
     import_error.append('gsearchlib')
@@ -32,8 +32,9 @@ class OpenInBrowser:
         
 class UrlStatus(OpenInBrowser):
     def openthis_url(self):
-        with urllib.urlopen(self.choice_the_user) as url:
-             print(f'Response Status: {url.getcode()}')
+        catshit = input("Write the link here: ")
+        with urllib.request.urlopen(catshit) as url:
+            print(f'Response Status: {url.getcode()}')
 
 def openthe_link():
         print("3. Get response status from the link. \n4. Read url file")
