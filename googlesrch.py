@@ -16,7 +16,7 @@ except ImportError:
 init(convert=True)
 
 class OpenInBrowser:
-    def __init__(self, user_choice):
+    def __init__(self, choice_the_user):
         self.choice_the_user = choice_the_user
         
     def open_in_browser_link(self, choice_the_user):
