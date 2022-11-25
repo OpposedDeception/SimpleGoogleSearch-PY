@@ -49,8 +49,7 @@ def openthe_link():
             exit()
         elif usrinp in (choice_from_user_two):
             usrinpchoice_2 = input("Paste your link here: ")
-            result_from_2 = openthis_url(usrinpchoice_2)
-            print(result_from_2)
+            UrlStatus.openthis_url(usrinpchoice_2)
             C = input("Copy the result if needed.")
             D = input(Fore.BLACK + Back.CYAN + 'Thank you for using my functions! \nPress ENTER to close')
             exit()
