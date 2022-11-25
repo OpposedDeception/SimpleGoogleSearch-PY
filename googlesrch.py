@@ -24,8 +24,11 @@ class OpenInBrowser:
        
     @staticmethod
     def ask_user():
-        input("Paste your link here: ")
-        open_in_browser_link()
+        try:
+            dogshit = input("Paste your link here: ")
+            open_in_browser_link()
+        except NameError:
+            webbrowser.open(dogshit, new = 0, autoraise = True)
         
 class UrlStatus(OpenInBrowser):
     def openthis_url(self, choice_the_user):
