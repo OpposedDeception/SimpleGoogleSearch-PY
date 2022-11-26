@@ -1,15 +1,19 @@
+import_error = []
+
 try:
     from gsearchlib import Search
     from colorama import Fore, Back, init
     from time import sleep
     import urllib.request
     import webbrowser
+    from rich.progress import Progress
 except ImportError:
     import_error.append('gsearchlib')
     import_error.append('colorama')
     import_error.append('time')
     import_error.append('urllib3')
-    import_error.append('webbrowser')           
+    import_error.append('webbrowser')  
+    import_error.append('rich')
     input(f'You havent installed {import_error} library. \nTo do so, write: pip install {import_error} \nPress CLOSE to exit')
         exit()
         
@@ -61,8 +65,11 @@ def google_search():
         searchvariant = input(Fore.BLACK + 'Welcome to Google Search! \nWrite "Y" to continue or "N" to close program: ')
         yes = ['Y']
         if searchvariant in (yes):
-            print(Fore.BLACK + 'Search engine is loading....')
-            sleep(4)
+            with Progress() as progress:
+                engine_loading = progress.add_task("[green]Loading search engine....", total=100)
+                while not progress.finished:
+                    progress.update(engine_loading, advance=0.5)
+                    sleep(0.04)
             var = input(Back.WHITE + 'Write what do you want to see: ')
             res = Search(var)
             print(res)
