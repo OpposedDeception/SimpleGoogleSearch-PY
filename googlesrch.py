@@ -6,7 +6,8 @@ try:
     from time import sleep
     import urllib.request
     import webbrowser
-    from rich.progress import Progress
+    from rich.progress import Progress 
+    from pprint import pprint
 except ImportError:
     import_error.append('gsearchlib')
     import_error.append('colorama')
@@ -14,6 +15,7 @@ except ImportError:
     import_error.append('urllib3')
     import_error.append('webbrowser')  
     import_error.append('rich')
+    import_error.append('pprintpp')
     input(f'You havent installed {import_error} library. \nTo do so, write: pip install {import_error} \nPress CLOSE to exit')
         exit()
         
@@ -72,7 +74,7 @@ def google_search():
                     sleep(0.04)
             var = input(Back.WHITE + 'Write what do you want to see: ')
             res = Search(var)
-            print(res)
+            pprint(res)
             k = input("Do you want to continue? ")
             if k in (yes):
                 openthe_link()
