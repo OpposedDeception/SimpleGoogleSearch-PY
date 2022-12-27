@@ -1,23 +1,10 @@
-import_error = []
-
-try:
-    from gsearchlib import Search
-    from colorama import Fore, Back, init
-    from time import sleep
-    import urllib.request
-    import webbrowser
-    from rich.progress import Progress 
-    from pprint import pprint
-except ImportError:
-    import_error.append('gsearchlib')
-    import_error.append('colorama')
-    import_error.append('time')
-    import_error.append('urllib3')
-    import_error.append('webbrowser')  
-    import_error.append('rich')
-    import_error.append('pprintpp')
-    input(f'You havent installed {import_error} library. \nTo do so, write: pip install {import_error} \nPress CLOSE to exit')
-        exit()
+from gsearchlib import Search
+from colorama import Fore, Back, init
+from time import sleep
+import urllib.request
+import webbrowser
+from rich.progress import Progress 
+from pprint import pprint
         
 init(convert=True)
 
