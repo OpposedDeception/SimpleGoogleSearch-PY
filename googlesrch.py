@@ -4,9 +4,21 @@ from time import sleep
 import urllib.request
 import webbrowser
 from rich.progress import Progress 
-from pprint import pprint
+from pprint import pprint 
+import json
         
 init(convert=True)
+
+# Not tested yet
+class SaveInJSON:
+    def __init__(self, data, results):
+        self.data = data
+        self.results = results
+        
+    def save_in_json(self):
+        json_object = json.dumps(self.data, indent=self.results)
+        with open("search_result.json", "w") as outfile:
+            outfile.write(json_object)
 
 class OpenInBrowser:
     def __init__(self, choice_the_user):
@@ -30,11 +42,13 @@ class UrlStatus(OpenInBrowser):
             print(f'Response Status: {url.getcode()}')
 
 def openthe_link():
-        print("3. Get response status from the link. \n4. Read url file")
+        print("3. Get response status from the link. \n4. Read url file.")
+        print("5. Save data in JSON file")
 
         usrinp = input("Tell me what to do: ")
         choice_from_user = ('3')
         choice_from_user_two = ('4')
+        choice_from_user_three = ('5')
         if usrinp in (choice_from_user):
             if usrinp in (choice_from_user):
             OpenInBrowser.ask_user()
@@ -47,6 +61,14 @@ def openthe_link():
             C = input("Copy the result if needed.")
             D = input(Fore.BLACK + Back.CYAN + 'Thank you for using my functions! \nPress ENTER to close')
             exit()
+        elif usrinp in (choice_from_user_three):
+            try:
+                SaveInJSON.save_in_json(data, count)
+            except:
+                raise IOError("There was an issue with writing data into file.")
+            finally:
+                pass 
+                exit()
 
 
 def google_search():
@@ -61,7 +83,8 @@ def google_search():
                     sleep(0.04)
             var = input(Back.WHITE + 'Write what do you want to see: ')
             res = Search(var)
-            pprint(res)
+            data = pprint(res)
+            count = int(input("Write how many results you got: "))
             k = input("Do you want to continue? ")
             if k in (yes):
                 openthe_link()
