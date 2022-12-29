@@ -14,6 +14,7 @@ setup(
         'colorama',
         'urllib.request',
         'rich',
-        'webbrowser'
-    ],
+        'webbrowser',
+        'json'
+    ]
 )
